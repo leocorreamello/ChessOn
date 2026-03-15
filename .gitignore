@@ -1,0 +1,10 @@
+# Node/Angular
+node_modules/
+dist/
+
+# .NET / C#
+bin/
+obj/
+.vs/
+*.user
+appsettings.Development.json
