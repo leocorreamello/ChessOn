@@ -31,24 +31,24 @@ namespace ChessApi.ChessBoard
                 boardMatrix[7, j] = 1; // white pieces
             }
 
-            //mapeia as posições do tabuleiro para um dicionário, onde a chave é a posição (ex: "a1", "b2") e o valor é o índice correspondente na lista linear.
+            //mapeia as posições do tabuleiro para um dicionário, onde a chave é a posição
+            //(ex: "a1", "b2") e o valor é o índice correspondente na lista linear.
             List<int> caseBoard = new List<int>();
             Dictionary<string, int> boardLookUp = new Dictionary<string, int>();
+
             char[] columns = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h' };
-            int index = 0;
 
             for (int i = 7; i >= 0; i--)
             {
                 for (int j = 0; j < 8; j++)
                 {
-                    //mapea todas as posições do tabuleiro para uma lista linear.
+                    //mapeia todas as posições do tabuleiro para uma lista linear
                     int pieceValue = boardMatrix[i, j];
                     caseBoard.Add(pieceValue);
 
                     //traduz as coordenadas do tabuleiro para um formato mais legível
                     string position = $"{columns[j]}{8 - i}";
                     boardLookUp[position] = pieceValue;
-                    index++;
                 }
             }
 
