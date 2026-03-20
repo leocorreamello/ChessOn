@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using ChessApi.Pieces;
+using System.Collections;
 using System.ComponentModel;
 
 namespace ChessApi.ChessBoard
@@ -53,6 +54,17 @@ namespace ChessApi.ChessBoard
             }
 
             //TODO: Agora estanciar as peças no jogo com base na matriz do tabuleiro e na lista linear.
+            Pawn pawn1 = new Pawn();
+            pawn1.SetColor(1);
+            pawn1.SetPosition(boardLookUp["a2"]);
+
+            Pawn pawn2 = new Pawn();
+            pawn2.SetColor(1);
+            pawn2.SetPosition(boardLookUp["b2"]);
+
+            Pawn pawn3 = new Pawn();
+            pawn3.SetColor(1);
+            pawn3.SetPosition(boardLookUp["c2"]);
         }
     }
 }
